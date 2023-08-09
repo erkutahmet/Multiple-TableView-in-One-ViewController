@@ -53,10 +53,26 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
             numberOfData = countries.count
         }
         if tableView == tableViewCity{
+            
             numberOfData = cities.count
         }
         
         return numberOfData!
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        var header: String?
+        
+        if tableView == tableViewCountry{
+            header = "Country"
+        }
+        
+        if tableView == tableViewCity{
+            header = "City"
+        }
+        
+        return header!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
