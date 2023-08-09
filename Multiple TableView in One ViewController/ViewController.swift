@@ -88,7 +88,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let index = indexPath.row
+        let index = indexPath.row + 1
         
         if tableView == tableViewCountry{
             
